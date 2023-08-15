@@ -1,0 +1,181 @@
+/* Define custom color variables */
+:root {
+	--dark: #374151; /* Dark gray */
+	--darker: #1F2937; /* Even darker gray */
+	--darkest: #111827; /* Darkest gray */
+	--grey: #6B7280; /* Gray for text */
+	--pink: #EC4899; /* Pink color */
+	--purple: #8B5CF6; /* Purple color */
+	--light: #EEE; /* Light gray */
+}
+
+/* Apply a reset to all elements */
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Fira sans", sans-serif;
+}
+
+/* Style for the entire body */
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	color: #FFF; /* White text color */
+	background-color: var(--dark); /* Use the dark gray as background */
+}
+
+/* Styling for the header section */
+header {
+	padding: 2rem 1rem;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* Header's main title */
+header h1 {
+	font-size: 2.5rem;
+	font-weight: 300;
+	color: var(--grey); /* Use the grey color */
+	margin-bottom: 1rem;
+}
+
+/* Styling for the new task form */
+#new-task-form {
+	display: flex;
+}
+
+/* Style for input and button elements */
+input, button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+}
+
+/* Styling for the new task input field */
+#new-task-input {
+	flex: 1 1 0%;
+	background-color: var(--darker); /* Use the darker gray as background */
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-right: 1rem;
+	color: var(--light); /* Use the light gray for text */
+	font-size: 1.25rem;
+}
+
+/* Placeholder text color for the new task input */
+#new-task-input::placeholder {
+	color: var(--grey); /* Use the grey color for placeholder text */
+}
+
+/* Styling for the submit button in the new task form */
+#new-task-submit {
+	color: var(--pink); /* Use the pink color */
+	font-size: 1.25rem;
+	font-weight: 700;
+	background-image: linear-gradient(to right, var(--pink), var(--purple)); /* Gradient background using pink and purple */
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+/* Hover effect for the submit button */
+#new-task-submit:hover {
+	opacity: 0.8;
+}
+
+/* Active state for the submit button */
+#new-task-submit:active {
+	opacity: 0.6;
+}
+
+/* Styling for the main content section */
+main {
+	flex: 1 1 0%;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* Styling for the task list */
+.task-list {
+	padding: 1rem;
+}
+
+/* Styling for the task list title */
+.task-list h2 {
+	font-size: 1.5rem;
+	font-weight: 300;
+	color: var(--grey);
+	margin-bottom: 1rem;
+}
+
+/* Styling for individual tasks */
+#tasks .task {
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--darkest); /* Use the darkest gray as background */
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-bottom: 1rem;
+}
+
+/* Styling for task content */
+.task .content {
+	flex: 1 1 0%;
+}
+
+/* Styling for task text */
+.task .content .text {
+	color: var(--light); /* Use the light gray for text */
+	font-size: 1.125rem;
+	width: 100%;
+	display: block;
+	transition: 0.4s;
+}
+
+/* Styling for task text when not in read-only state */
+.task .content .text:not(:read-only) {
+	color: var(--pink); /* Use the pink color for editable text */
+}
+
+/* Styling for task actions */
+.task .actions {
+	display: flex;
+	margin: 0 -0.5rem;
+}
+
+/* Styling for action buttons */
+.task .actions button {
+	cursor: pointer;
+	margin: 0 0.5rem;
+	font-size: 1.125rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: 0.4s;
+}
+
+/* Hover effect for action buttons */
+.task .actions button:hover {
+	opacity: 0.8;
+}
+
+/* Active state for action buttons */
+.task .actions button:active {
+	opacity: 0.6;
+}
+
+/* Styling for the edit action button */
+.task .actions .edit {
+	background-image: linear-gradient(to right, var(--pink), var(--purple)); /* Gradient text using pink and purple */
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+/* Styling for the delete action button */
+.task .actions .delete {
+	color: crimson; /* Crimson red color for delete button */
+}
